@@ -6,7 +6,7 @@ import useLoginModal from "../../hooks/useLoginModal";
 
 interface SidebarItemProps {
 	label: string;
-	href: string;
+	href?: string;
 	icon: IconType;
 	onClick?: () => void;
 	auth?: boolean;

@@ -1,4 +1,5 @@
 {
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"prettier.useEditorConfig": false
+	"prettier.useEditorConfig": false,
+	"prisma.fileWatcher": true
 }
