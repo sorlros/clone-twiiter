@@ -10,7 +10,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 	try {
 		const { currentUser } = await serverAuth(req, res);
 		const { body } = req.body;
+		console.log(typeof { body });
+
 		const { postId } = req.query;
+		console.log({ postId });
 
 		if (!postId || typeof postId !== "string") {
 			throw new Error("Invalid ID");
@@ -24,7 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 			},
 		});
 
-		return res.status(200).end(comment);
+		return res.status(200).json(comment);
 	} catch (error) {
 		console.log(error);
 		return res.status(400).end();
